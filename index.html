@@ -305,7 +305,8 @@ function checkAnswer(selectedIndex, selectedBtn, q) {
         feedbackBox.innerHTML = `<strong>正解！</strong><br>${q.r}<span class="source-ref">参照：${q.s}</span>`;
         feedbackBox.className = 'feedback';
         score++;
-        scoreText.textContent = `正解数: ${score}`;
+        scoreText.textContent = `正解数: ${score}`; // scoreTextをscoreDisplayに修正しないといけないが、ここで修正
+        scoreDisplay.textContent = `正解数: ${score}`; // 正しい要素IDを使用
     } else {
         selectedBtn.classList.add('incorrect');
         // 正解のボタンを強調
